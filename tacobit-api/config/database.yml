@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: <%= ENV['DATABASE_HOST'] || 'localhost' %>
+  username: <%= ENV['DATABASE_USERNAME'] || 'postgres' %>
+  password: <%= ENV['DATABASE_PASSWORD'] || 'password' %>
+  pool: 5
+
+development:
+  <<: *default
+  database: tacobit_development
+
+test:
+  <<: *default
+  database: tacobit_test
+
+production:
+  <<: *default
+  database: tacobit_production
