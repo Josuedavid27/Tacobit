@@ -1,0 +1,5 @@
+tacobit-api/log/*
+!tacobit-api/log/.keep
+
+tacobit-api/tmp/*
+!tacobit-api/tmp/.keep
